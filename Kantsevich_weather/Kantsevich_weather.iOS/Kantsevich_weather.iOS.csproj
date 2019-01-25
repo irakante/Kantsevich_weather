@@ -157,4 +157,16 @@
       <Name>Kantsevich_weather</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\drog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rain.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\snow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\sun.jpg" />
+  </ItemGroup>
 </Project>

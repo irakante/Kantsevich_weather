@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+ 
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Kantsevich_weather
@@ -14,9 +16,10 @@ namespace Kantsevich_weather
             MainPage = new MainPage();
         }
 
-        protected override void OnStart()
+        protected override   void OnStart()
         {
-            // Handle when your app starts
+           //   WeatherMainModel = await _weatherServices.GetWeatherDetails();
+
         }
 
         protected override void OnSleep()

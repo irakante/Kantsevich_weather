@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace Kantsevich_weather
 {
@@ -13,5 +14,6 @@ namespace Kantsevich_weather
         {
             InitializeComponent();
         }
+        
     }
 }
