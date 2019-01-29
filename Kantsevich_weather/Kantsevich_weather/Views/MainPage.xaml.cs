@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
-using Xamarin.Essentials;
+﻿using Xamarin.Forms;
 
 namespace Kantsevich_weather
 {
@@ -13,7 +7,6 @@ namespace Kantsevich_weather
         public MainPage()
         {
             InitializeComponent();
-        }
-        
+        }        
     }
 }

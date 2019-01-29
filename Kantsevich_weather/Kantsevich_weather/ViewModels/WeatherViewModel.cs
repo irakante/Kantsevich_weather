@@ -1,36 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Kantsevich_weather.Models;
 using Kantsevich_weather.ServicesHandler;
 using System.Threading.Tasks;
-using System.Windows.Input;
-using Xamarin.Forms;
-using Xamarin.Essentials;
 
 namespace Kantsevich_weather.ViewModels
 {
     public class WeatherViewModel : INotifyPropertyChanged
-    {
-     
+    {     
         public WeatherViewModel()
         {
             BackgroundImageDroh = "sun.png";
-
             Task.Run(async () => {
                 await InitializeGetWeatherDrohobychAsync();
             });
         }
 
-
-
         WeatherServices _weatherServices = new WeatherServices();
-
-
         private WeatherMainModel _weatherMainModel;  // for xaml binding
-
         public WeatherMainModel WeatherMainModel
         {
             get { return _weatherMainModel; }
@@ -43,30 +30,7 @@ namespace Kantsevich_weather.ViewModels
             }
         }
 
-        public void SetBackgroundImage(string icon)
-        {
-            if(icon == "01d") { BackgroundImageDroh = "sun.png"; }
-            if(icon == "02d") { BackgroundImageDroh = "sun.png"; }
-            if(icon == "03d") { BackgroundImageDroh = "drog.png"; }
-            if(icon == "04d") { BackgroundImageDroh = "drog.png"; }
-            if(icon == "09d") { BackgroundImageDroh = "rain.png"; }
-            if(icon == "10d") { BackgroundImageDroh = "rain.png"; }
-            if(icon == "11d") { BackgroundImageDroh = "snow.png"; }
-            if(icon == "13d") { BackgroundImageDroh = "snow.png"; }
-            if(icon == "50d") { BackgroundImageDroh = "drog.png"; }
-
-            if (icon == "01n") { BackgroundImageDroh = "sun.png"; }
-            if (icon == "02n") { BackgroundImageDroh = "snow.png"; }
-            if (icon == "03n") { BackgroundImageDroh = "drog.png"; }
-            if (icon == "04n") { BackgroundImageDroh = "drog.png"; }
-            if (icon == "09n") { BackgroundImageDroh = "rain.png"; }
-            if (icon == "10n") { BackgroundImageDroh = "rain.png"; }
-            if (icon == "11n") { BackgroundImageDroh = "snow.png"; }
-            if (icon == "13n") { BackgroundImageDroh = "snow.png"; }
-            if (icon == "50n") { BackgroundImageDroh = "drog.png"; }
-
-        }
-
+       
         private string _city;   // for entry binding and for method parameter value
         public string City
         {
@@ -80,7 +44,6 @@ namespace Kantsevich_weather.ViewModels
                 OnPropertyChanged();
             }
         }
-
 
         private string _backgroundImageDroh; // for weather icon background
         public string BackgroundImageDroh
@@ -141,15 +104,35 @@ namespace Kantsevich_weather.ViewModels
             }
         }
 
-       
+        public void SetBackgroundImage(string icon)
+        {
+            if (icon == "01d") { BackgroundImageDroh = "sun.png"; }
+            if (icon == "02d") { BackgroundImageDroh = "sun.png"; }
+            if (icon == "03d") { BackgroundImageDroh = "drog.png"; }
+            if (icon == "04d") { BackgroundImageDroh = "drog.png"; }
+            if (icon == "09d") { BackgroundImageDroh = "rain.png"; }
+            if (icon == "10d") { BackgroundImageDroh = "rain.png"; }
+            if (icon == "11d") { BackgroundImageDroh = "snow.png"; }
+            if (icon == "13d") { BackgroundImageDroh = "snow.png"; }
+            if (icon == "50d") { BackgroundImageDroh = "drog.png"; }
+
+            if (icon == "01n") { BackgroundImageDroh = "sun.png"; }
+            if (icon == "02n") { BackgroundImageDroh = "snow.png"; }
+            if (icon == "03n") { BackgroundImageDroh = "drog.png"; }
+            if (icon == "04n") { BackgroundImageDroh = "drog.png"; }
+            if (icon == "09n") { BackgroundImageDroh = "rain.png"; }
+            if (icon == "10n") { BackgroundImageDroh = "rain.png"; }
+            if (icon == "11n") { BackgroundImageDroh = "snow.png"; }
+            if (icon == "13n") { BackgroundImageDroh = "snow.png"; }
+            if (icon == "50n") { BackgroundImageDroh = "drog.png"; }
+
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-           
+        }        
 
     }
 }

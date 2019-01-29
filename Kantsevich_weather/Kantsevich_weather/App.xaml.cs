@@ -12,14 +12,12 @@ namespace Kantsevich_weather
         public App()
         {
             InitializeComponent();
-
             MainPage = new MainPage();
         }
 
         protected override   void OnStart()
         {
-           //   WeatherMainModel = await _weatherServices.GetWeatherDetails();
-
+         
         }
 
         protected override void OnSleep()

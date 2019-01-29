@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
+
 namespace Kantsevich_weather.Models
 {
     // serves as our main model in centralizing different classes
